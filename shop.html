@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">    <title>shop</title>
+    <style>
+        body {
+            background-color: #f7f5fa;
+            font-family: sans-serif;
+        }
+        .hero {
+          padding: 150px 30px;
+        }
+        #check {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  font-size: 1.1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: black;
+}
+.close-menu {color: black;}
+.container {
+            display: grid;
+            padding: 15px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+        }
+        .box {
+            min-height: 250px;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            max-height: 180px;
+            width: auto;
+            margin-bottom: 0;
+        }
+        h3 {
+          text-align: center;
+            margin: 3px 5px;
+            font-size: 1.5rem;
+        }
+        p {
+            margin: 5px 5px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .box a {text-decoration: none;}
+        button {
+            display: block;
+            font-size: 1rem;
+            padding: 5px 10px 5px 10px;
+            border: 1px solid #2563eb;
+            background-color: #2563eb;
+            border-radius: 2px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+        }
+h1 , h2{text-align: center; font-style: italic;}
+h2 {font-size: 3rem; font-weight: 600;}
+.go-to {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.go-to a {
+  text-decoration: none;
+  background-color: #0f0f0f;
+  padding: 8px;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 2rem;
+}
+.go-to a:hover {
+  transform: translateY(-2px);
+  background: #000000;
+}
+ .back {
+            border: 1px solid #f7f5fa;
+            background-color: #f7f5fa;
+            padding: 2px 5px 2px 5px; 
+            color: black;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+        .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  
+}
+.icons { display: flex; gap: 20px;}
+.icons i {font-size: 25px; color: black;}
+.footer p {margin-bottom: 0; padding-bottom: 0;}
+@media (max-width: 680px) {
+    body {
+        background-size: cover;
+    }
+    .hero {
+      height: 100%;
+      margin-bottom: 70%;
+    }
+     .open-menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: fit-content;
+    height: 100vh;
+    background: #f8f8f8;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    transition: right 0.4s ease;
+  }
+  .nav-links a {
+    color: black;
+    text-align: left;
+    text-transform: lowercase;
+  }
+  .nav-links a::first-letter{text-transform: capitalize;}
+  #check:checked ~ .nav-links {
+    right: 0;
+  }
+
+  .close-menu {
+    display: block;
+    align-self: flex-end;
+  }
+  .logo img { height: 45px;}
+  .container { grid-template-columns: 1fr;}
+  .box {
+                text-align: center;
+            }
+            img {
+                height: auto;
+                max-width: 100%;
+            }
+            .go-to a {
+              font-size: 15px;
+            }
+    .footer p {font-size: 0.6rem;}
+  }
+  
+    </style>
+</head>
+<nav class="navbar">
+
+  <div class="logo">
+    <a href="./index.html"><img src="image.png" alt="logo-image"></a>
+  </div>
+
+  <!-- checkbox -->
+  <input type="checkbox" id="check">
+
+  <!-- hamburger -->
+  <label for="check" class="open-menu">☰</label>
+
+  <!-- menu -->
+  <div class="nav-links">
+    <label for="check" class="close-menu">✕</label>
+
+    <a href="./index.html">HOME</a>
+    <a href="./shop.html">SHOP</a>
+    <a href="./AboutUs.html">ABOUT</a>
+    <a href="./contact.html">CONTACT</a>
+    <a href="./watches.html">WATCHES</a>
+    <a href="./jewelries.html">JEWELRIES/ACCESSORIES</a>
+  </div>
+
+</nav>
+    <button onclick="history.back()" class="back">← Back</button></a>
+
+<body>
+     <section class="hero">
+        <h1>EXPLORE</h1>
+        <div class="container">
+        <div class="box">
+            <img src="./ap1.png">
+            <h3>AP Styled Watch</h3>
+            <p>&#8358; 40,000</p>
+                   <a href="product-watch-01.html"><button>View details</button></a>
+        </div>
+        <div class="box">
+            <img src="./Skeleton Cartier1.png" alt="luxury-watch">
+            <h3>Cartier Styled Watch</h3>
+            <p>&#8358; 125,000</p>
+                   <a href="product-watch-02.html"><button>View details</button></a>
+        </div>
+        <div class="box">
+            <img src="./earring.png">
+            <h3>Earring</h3>
+            <p>&#8358; 7,000</p>
+                   <a href="product-earring.html"><button>View details</button></a>
+        </div>
+        <div class="box">
+            <img src="./cwatch.png">
+            <h3>Rolex for couples</h3>
+            <p>&#8358; 55,000</p>
+                   <a href="product-watch-13.html"><button>View details</button></a>
+        </div>
+        <div class="box">
+            <img src="./poedegar.png" alt="luxury-watch">
+            <h3>Poedegar</h3>
+            <p>&#8358; 35,000</p>
+                   <a href="product-watch-05.html"><button>View details</button></a>
+        </div>
+        <div class="box">
+            <img src="./ring.png" alt="luxury-ring">
+            <h3>Chunky Bangles</h3>
+            <p>&#8358; 8,000</p>
+                   <a href="product-ring.html"><button>View details</button></a>
+        </div>
+        <div class="box">
+            <img src="./earring0.png">
+            <h3>Earring</h3>
+            <p style="font-size: 1.2rem;">&#8358; 7,000</p>
+                   <a href="product-earring-0.html"><button>View details</button></a>
+        </div>
+        <div class="box">
+            <img src="./patekdiamond.png">
+            <h3>Patek Philippe Styled Watch</h3>
+            <p>&#8358; 35,000</p>
+                   <a href="product-watch-08.html"><button>View details</button></a>
+        </div>
+        <div class="box">
+            <img src="./bangle.png">
+            <h3>Cuff Set Bangle</h3>
+            <p>&#8358; 8,000</p>
+                   <a href="product-bangle.html"><button>View details</button></a>
+        </div>
+        </div>
+        <h2>GO TO:</h2>
+       <div class="go-to">
+        <a href="./jewelries.html">Jewelries/accessories</a>
+        <a href="./watches.html">Watches</a>
+       </div>
+     </section>
+ <footer class="footer">
+          <div class="icons">
+          <a href="https://wa.me/2349049297717?"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@rodiyahhht"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/diyahs_exclussive_world?igsh=bHF6bTdycnF6ajQ0"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <p>&COPY;2026 Diyah's jewelry - Designed by <a href="https://x.com/inspectorlhee">Inspectorlhee</a> - All right reserved.</p>
+        </footer></body>
+</html>
