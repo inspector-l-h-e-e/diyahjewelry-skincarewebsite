@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Jewelries/Accessories</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: sans-serif , poppins;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-links a {
+            font-size: 1.1rem;
+            color: black;
+            text-decoration: none;
+        }
+        #check {
+            display: none;
+        }
+        .open-menu ,
+        .close-menu {
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: #3a3a3a;
+            display: none;
+        }
+        .hero{
+            height: 100vh;
+            width: 100%;
+        }
+        .back {
+            border: 1px solid #ccc;
+            background-color: #3a3a3a;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .hero {
+            height: 100vh;
+            padding: 10px;
+            width: auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3.5rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding-left: 15px;
+        }
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .product-info img {
+            height: 180px;
+            width: auto;
+            margin: 5px;
+        }
+        .price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 3px;
+            margin: 5px;
+        }
+        .price p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .price a {text-decoration: none;}
+        .order-btn {
+            display: block;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 5px 7px 5px 7px;
+            border: 1px solid #cccc;
+            border-radius: 2px;
+            background-color: #2563eb;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            cursor: pointer;
+        }
+        .back {
+            border: 1px solid #f8f8f8;
+            padding: 2px 5px 2px 5px;
+            color: black;
+            background-color: #f8f8f8;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+        h2 {
+            font-size: 2rem;
+            margin: 10px 5px;
+            text-align: center;
+        }
+        .to-do {
+            font-size: 1.6rem;
+            font-weight: 200;
+            text-align: center;
+            margin-top: 0;
+        }
+        .pages {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .pages i {
+            font-size: 1.9rem;
+            color: #3a3a3a;
+            margin-bottom: 60px;
+        }
+        @media (max-width: 680px) {
+            .open-menu {display: block;}
+            .nav-links {
+                position: fixed;
+                flex-direction: column;
+                width: fit-content;
+                height: 100vh;
+                right: -100%;
+                top: 0;
+                gap: 20px;
+                padding: 40px 20px;
+                background-color: #f8f8f8;
+                transition: all 0.4s ease;
+            }
+            .nav-links a {color: #3a3a3a;
+            text-transform: lowercase;
+            text-align: left;}
+            .nav-links a::first-letter {text-transform: capitalize;}
+            #check:checked ~ .nav-links {
+                right: 0;
+            }
+            .close-menu {
+                display: block; 
+                align-self: flex-end;
+            }
+            .logo img {
+                height: 45px;
+            }
+            h1 { 
+                font-size: 1.7rem;
+            }
+            .product-container{
+                grid-template-columns: 1fr 1fr;
+            }
+            .product-info img {
+                height: auto;
+                max-width: 100%;
+            }
+            .price {
+                flex-direction: column;
+                padding: 3px;
+                justify-content: center;
+            }
+            .price p {
+                font-size: 1rem;
+                margin: 0;
+            }
+            .order-btn {
+                font-size: 0.9rem;
+            }
+            h2 {font-size: 1.2rem;}
+            .to-do {font-size: 1.2rem;}
+            .pages i {font-size: 1.8rem;}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="./index.html"><img src="./image.png" alt="logo-image"></a>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="open-menu">☰</label>
+        <div class="nav-links">
+            <label for="check" class="close-menu">✕</label>
+            <a href="./index.html">HOME</a>
+            <a href="./shop.html">SHOP</a>
+            <a href="./AboutUs.html">ABOUT</a>
+            <a href="./contact.html">CONTACT</a>
+            <a href="./watches.html">WATCHES</a>
+            <a href="">JEWELRIES/ACCESSORIES</a>
+        </div>
+    </nav>
+    <button onclick="history.back()" class="back">← Back</button>
+    <section class="hero">
+        <h1>Jewelries & Accessories</h1>
+        <div class="product-container">
+            <div class="product-info">
+                <img src="./earring.png" alt="">
+                <div class="price">
+                   <p>&#8358; 7,000</p>
+                   <a href="./product-earring.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                        <div class="product-info">
+                <img src="./earring0.png" alt="">
+                <div class="price">
+                   <p>&#8358; 7,000</p>
+                   <a href="./product-earring-0.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                        <div class="product-info">
+                <img src="./earring1.png" alt="">
+                <div class="price">
+                   <p>&#8358; 7,000</p>
+                   <a href="./product-earring-1.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                        <div class="product-info">
+                <img src="./earring2.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-earring-2.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                        <div class="product-info">
+                <img src="./bangle.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                        <div class="product-info">
+                <img src="./bangle1.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle-1.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                        <div class="product-info">
+                <img src="./bangle2.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle-2.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                        <div class="product-info">
+                <img src="./earring3.png" alt="">
+                <div class="price">
+                   <p>&#8358; 7,000</p>
+                   <a href="./product-earring-3.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                                    <div class="product-info">
+                <img src="./bangle3.png" alt="">
+                <div class="price">
+                   <p>&#8358; 5,000</p>
+                   <a href="./product-bangle-3.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                                    <div class="product-info">
+                <img src="./earring4.png" alt="">
+                <div class="price">
+                   <p>&#8358; 10,000</p>
+<a href="./product-earring-4.html"><button class="order-btn">View details</button></a>                
+            </div>
+        </div>
+        
+                                    <div class="product-info">
+                <img src="./earring5.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+<a href="./product-earring-5.html"><button class="order-btn">View details</button></a>                
+            </div>
+        </div>
+                                    <div class="product-info">
+                <img src="./earring6.png" alt="">
+                <div class="price">
+                   <p>&#8358; 10,000</p>
+<a href="./product-earring-6.html"><button class="order-btn">View details</button></a>                
+            </div>
+        </div>
+                                    <div class="product-info">
+                <img src="./ring.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-ring.html"><button class="order-btn">View details</button></a>
+            </div>
+         </div>
+                                    <div class="product-info">
+                <img src="./bangle4.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle-4.html"><button class="order-btn">View details</button></a>
+            </div>
+         </div>
+                                    <div class="product-info">
+                <img src="./bangle5.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle-5.html"><button class="order-btn">View details</button></a>
+            </div>
+        </div>
+                                    <div class="product-info">
+                <img src="./earring7.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+<a href="./product-earring-7.html"><button class="order-btn">View details</button></a>                
+            </div>
+        </div>
+                                    <div class="product-info">
+                <img src="./earring8.png" alt="">
+                <div class="price">
+                   <p>&#8358; 7,000</p>
+<a href="./product-earring-8.html"><button class="order-btn">View details</button></a>                
+            </div>
+         </div>
+                                    
+                                <div class="product-info">
+                <img src="./ring2.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-ring-2.html"><button class="order-btn">View details</button></a>
+            </div>
+         </div>
+                                <div class="product-info">
+                <img src="./earring9.png" alt="">
+                <div class="price">
+                   <p>&#8358; 7,000</p>
+<a href="./product-earring-9.html"><button class="order-btn">View details</button></a>                
+            </div>
+        </div>
+                                <div class="product-info">
+                <img src="./bangle6.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle-6.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                                <div class="product-info">
+                <img src="./bangle7.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle-7.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+                                <div class="product-info">
+                <img src="./bangle8.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle-8.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+              <div class="product-info">
+                <img src="./bangle9.png" alt="">
+                <div class="price">
+                   <p>&#8358; 30,000</p>
+                   <a href="./product-bangle9.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+              <div class="product-info">
+                <img src="./bangle10.png" alt="">
+                <div class="price">
+                   <p>&#8358; 45,000</p>
+                   <a href="./product-bangle10.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+              <div class="product-info">
+                <img src="./bangle11.png" alt="">
+                <div class="price">
+                   <p>&#8358; 8,000</p>
+                   <a href="./product-bangle11.html"><button class="order-btn">View details</button></a>
+                </div>
+            </div>
+            
+         </div>
+         <h2>Can't find what you want?</h2>
+         <p class="to-do">send us a picture of it:</p>
+         <div class="pages">
+        <a href="https://wa.me/2349049297717?"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.tiktok.com/@rodiyahhht"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/diyahs_exclussive_world?igsh=bHF6bTdycnF6ajQ0"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </section>
+</body>
+</html>

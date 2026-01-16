@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Contact Us</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            background-color: #f7f5fa;
+            font-family: sans-serif;
+        }
+        .hero {
+            width: auto;
+            margin: 0;
+            padding: 15px;
+        }
+        .navbar {
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-links a {
+            font-size: 1.1rem;
+            color: black;
+            text-decoration: none;
+        }
+        #check {
+            display: none;
+        }
+        .open-menu, 
+        .close-menu {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #3a3a3a;
+        }
+        .contact-form {
+            display: flex;
+            max-width: 500px;
+            gap: 15px;
+            flex-direction: column;
+        }
+        .contact-form input,
+        .contact-form textarea {
+          font-size: 1.5rem;
+          padding: 10px;
+          border: 1px solid #cccc;
+          border-radius: 3px;
+        }
+        .contact-form button {
+            width: 50%;
+            align-self: center;
+            border: 1px solid #cccc;
+            border-radius: 3px;
+            padding: 3px 3px 3px 3px;
+            font-size: 1.3rem;
+            background-color: pink;
+            color: #3a3a3a;
+        }
+        h3 { font-size: 2.7rem;}
+        p {
+            font-size: 1.5rem;
+        }
+        .contact-text {
+            text-align: center;
+            font-style: italic;
+            padding-left: 30px;
+        }
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+        .icons i {
+            font-size: 1.7rem;
+            color: black;
+            font-weight: 800;
+            color: black;
+        }
+        .icons a {
+            font-size: 1.6rem;
+            color: #3a3a3a;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .footer p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+         button {
+            margin-left: 20px;
+             border: 1px solid #ccc;
+            background-color: #3a3a3a;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .back {
+            border: 1px solid #f7f5fa;
+            background-color: #f7f5fa;
+            padding: 2px 5px 2px 5px;
+            color: black;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+    
+        @media (max-width: 680px) {
+            .close-menu {
+                display: block;
+                align-self: flex-end;
+            }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: fit-content;
+                height: 100vh;
+                background-color: white;
+                flex-direction: column;
+                padding: 60px 20px;
+                gap: 20px;
+                transition: all 0.4s ease;
+            }
+            .nav-links a {
+            color: #3a3a3a;
+            text-align: left;
+            text-transform: lowercase;
+            
+            }
+            .nav-links a::first-letter{text-transform: capitalize;}
+            #check:checked ~ .nav-links {
+                right: 0;
+            }
+            .open-menu {
+                display: block;
+            }
+            .hero {
+                text-align: center;
+                width: auto;
+            }
+            .hero p {
+                font-size: 1.3rem;
+            }
+            .icons i ,
+            .icons a {
+                font-size: 1.3rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+            .logo img {
+                height: 45px;
+            }
+            .footer p {
+                font-size: 1rem;
+                margin-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar">
+    <div class="logo">
+    <a href="./index.html"><img src="./image.png"></a></div>
+    
+    <input type="checkbox" id="check">
+
+    <label for="check" class="open-menu">☰</label>
+
+    <div class="nav-links">
+        <label for="check" class="close-menu">✕</label>
+        <a href="./index.html">HOME</a>
+        <a href="./shop.html">SHOP</a>
+        <a href="./AboutUs.html">ABOUT</a>
+        <a href="./contact.html">CONTACT</a>
+        <a href="./watches.html">WATCHES</a> 
+        <a href="./jewelries.html">JEWELRIES/ACCESSORIES</a>  
+    </div>
+   </nav>
+       <button onclick="history.back()" class="back">← Back</button></a>
+
+   <section class="hero">
+    <h3>CONTACT US</h3>
+    <hr>
+    <p>Have a question or want to place and order?<br><span class="contact-text">We'd love to hear from you.</span></p>
+    <form action="https://formspree.io/f/xdaoolpe" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email or Phone" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button>Send Message</button>
+    </form> 
+    <hr>
+        <div class="icons">
+        <a href="https://wa.me/2349049297717?"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+        <a href="https://www.tiktok.com/@rodiyahhht"><i class="fa-brands fa-tiktok"></i>Tiktok</a>
+        <a href="https://www.instagram.com/diyahs_exclussive_world?igsh=bHF6bTdycnF6ajQ0"><i class="fa-brands fa-instagram"></i>instagram</a>
+        </div>
+        <hr>
+        <p class="info"><i class="fa-regular fa-clock"></i>Business Hours: Always open.</p>
+        <hr>
+        <p class="info"><i class="fa-solid fa-location-dot"></i>Location: Online-based, Nigeria.</p>
+        </div>
+        <hr>
+   </section>
+       <footer class="footer">
+        <p>Send us a message and we'll get back to you within 24hours❤️</p>
+       </footer>
+</body>
+</html>

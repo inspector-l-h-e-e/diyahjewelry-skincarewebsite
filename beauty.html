@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Essentials</title>
+    <style>
+        #check {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: green;
+  position: relative;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 680px) {
+
+  .open-menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: green;
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 25px;
+    transition: right 0.3s ease;
+  }
+
+  #check:checked ~ .nav-links {
+    right: 0;
+  }
+
+  .close-menu {
+    display: block;
+    align-self: flex-end;
+  }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+
+     <div class="logo">
+            <a href="./index.html"><img src="./image.png" alt="logo-image"></a>
+        </div>
+
+  <input type="checkbox" id="check">
+
+  <label for="check" class="open-menu">☰</label>
+
+  <div class="nav-links">
+    <label for="check" class="close-menu">✕</label>
+
+    <a href="./index.html">Home</a>
+    <a href="./shop.html">Shop</a>
+    <a href="./AboutUs.html">Brands</a>
+    <a href="">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+</nav>
+</body>
+</html>

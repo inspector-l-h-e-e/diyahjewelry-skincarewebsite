@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: sans-serif;
+        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  10px;
+}
+.nav-links {
+    display: flex;
+    gap: 10px
+}
+.nav-links a {
+  font-size: 1.1rem;
+  color: black;
+  text-decoration: none;
+}
+.logo img {
+    width: auto;
+    height: 50px;
+}
+.hero {
+       width: auto;
+       margin: 80px 20px;
+       padding: auto;
+       font-size: 2rem;
+}
+ h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 4rem;
+}
+#check {
+    display: none;
+}
+.open-menu ,
+.close-menu {
+    font-size: 2.5rem;
+    color: black;
+    display: none;
+    cursor: pointer;
+}
+.about-us {
+    border-radius: 50%;
+    height: 100%;
+    display: flex;
+    border: 1px solid #cccc;
+    background-color: darkgreen;
+}
+.about-box {
+    border: 1px solid #cccc;
+    border-radius: 5px;
+    background-color: black;
+    margin: 10px;
+    padding: 5px;
+}
+.about-box p {
+    text-align: center;
+    color: white;
+}
+
+ .footer { 
+            margin-top: 40px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+.footer p {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.8rem;
+        }   
+        
+         .back {
+            border: 1px solid #f7f7f7;
+            background-color: #f7f7f7;
+            padding: 2px 5px 2px 5px;
+            color: black;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+@media (max-width:680px) {
+    .open-menu {
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        right: -100%;
+        width: fit-content;
+        height: 100vh;
+        background-color: white;
+        transition: all 0.4s ease;
+        padding: 60px 20px;
+        gap: 20px;
+    }
+    .nav-links a {
+        color: #3a3a3a;
+        text-align: left;
+        text-transform: lowercase;
+    }
+    .nav-links a::first-letter{text-transform: capitalize;}
+    #check:checked ~ .nav-links {
+        right: 0;
+    }
+    .close-menu {
+        display: block;
+        align-self: flex-end;
+    }
+    .logo img {
+        height: 45px;
+        width: auto;
+        padding-top: 10px;
+    }
+    .hero {
+        text-align: center;
+        width: auto;
+        font-size: 1.2rem;
+    }
+    .hero h1 {
+        font-size: 2.8rem;
+    }  
+    .footer p {
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+       <nav class="navbar">
+    <div class="logo">
+    <a href="./index.html"><img src="./image.png"></a></div>
+    
+    <input type="checkbox" id="check">
+
+    <label for="check" class="open-menu">☰</label>
+
+    <div class="nav-links">
+        <label for="check" class="close-menu">✕</label>
+        <a href="./index.html">HOME</a>
+        <a href="./shop.html">SHOP</a>
+        <a href="./AboutUs.html">ABOUT</a>
+        <a href="./contact.html">CONTACT</a>
+        <a href="./watches.html">WATCHES</a>  
+        <a href="./jewelries.html">JEWELRIES/ACCESSORIES</a>
+    </div>
+   </nav>
+      <button onclick="history.back()" class="back">← Back</button></a>
+        <section class="hero">
+          <h1>ABOUT US</h1>
+          <div class="about-us">
+            <div class="about-box">
+                <p>Diyah's Jewelry is an online, home-based brand offering carefully selected unisex jewelry with a luxury, timeless feel. Quality-checked and packaged with care.</p>
+            </div>
+          </div>
+        </section>  
+        <footer class="footer">
+        <p>Customers satisfaction is our priority</p>
+        </footer>     
+</body>
+</html>
