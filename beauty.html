@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Essentials</title>
     <style>
+      body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f5fa;
+            font-family: sans-serif;
+        }
+        .hero {
+            width: auto;
+            margin: 0;
+            padding: 15px;
+        }
         #check {
   display: none;
 }
@@ -14,12 +26,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: green;
   position: relative;
 }
 
 .logo img {
-  height: 45px;
+  height: 50px;
   width: auto;
 }
 
@@ -29,17 +40,29 @@
 }
 
 .nav-links a {
-  color: white;
+  color: black;
+  font-size: 1.1rem;
   text-decoration: none;
 }
 
 .open-menu,
 .close-menu {
   display: none;
-  font-size: 30px;
+  font-size: 2rem;
   cursor: pointer;
-  color: white;
+  color: black;
 }
+.back {
+            border: 1px solid #f7f5fa;
+            background-color: #f7f5fa;
+            padding: 2px 5px 2px 5px;
+            color: black;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+h1 {text-align: center;
+font-size: 2.3rem; font-weight: 500;}
 @media (max-width: 680px) {
 
   .open-menu {
@@ -50,14 +73,16 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
+    width: fit-content;
     height: 100vh;
-    background: green;
+    background: #f7f5fa;
     flex-direction: column;
-    padding: 60px 20px;
-    gap: 25px;
-    transition: right 0.3s ease;
+    padding: 40px 20px;
+    gap: 20px;
+    transition: right 0.4s ease;
   }
+  .nav-links a {text-transform: lowercase; text-align: left;}
+  .nav-links a::first-letter {text-transform: uppercase;}
 
   #check:checked ~ .nav-links {
     right: 0;
@@ -67,6 +92,7 @@
     display: block;
     align-self: flex-end;
   }
+  h1 {font-size: 1.1rem;}
 }
     </style>
 </head>
@@ -84,13 +110,19 @@
   <div class="nav-links">
     <label for="check" class="close-menu">✕</label>
 
-    <a href="./index.html">Home</a>
-    <a href="./shop.html">Shop</a>
-    <a href="./AboutUs.html">Brands</a>
-    <a href="">About</a>
-    <a href="#">Contact</a>
+    <a href="./index.html">HOME</a>
+    <a href="./shop.html">SHOP</a>
+    <a href="./watches.html">WATCHES</a>
+    <a href="./jewelries.html">JEWELRIES</a>
+    <a href="./AboutUs.html">ABOUT</a>
+    <a href="./contact.html">CONTACT</a>
+    <a href="./beauty.html">BEAUTY ESSENTIALS</a>
   </div>
 
 </nav>
+<button onclick="history.back()" class="back">← Back</button></a>
+<section class="hero">
+  <h1>Complete your look - from glowing skin to timeless jewelry.</h1>
+</section>
 </body>
 </html>

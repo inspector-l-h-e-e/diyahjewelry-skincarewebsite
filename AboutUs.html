@@ -9,7 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet"> 
     <style>
         body {
-            background-color: #f7f7f7;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f5fa;
             font-family: sans-serif;
         }
 .navbar {
@@ -32,11 +35,10 @@
     height: 50px;
 }
 .hero {
-       width: auto;
-       margin: 80px 20px;
-       padding: auto;
-       font-size: 2rem;
-}
+            width: auto;
+            margin: 0;
+            padding: 15px;
+        }
  h1 {
   text-align: center;
   font-weight: 500;
@@ -47,7 +49,7 @@
 }
 .open-menu ,
 .close-menu {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
     display: none;
     cursor: pointer;
@@ -101,9 +103,9 @@
         right: -100%;
         width: fit-content;
         height: 100vh;
-        background-color: white;
+        background-color: #f7f5fa;
         transition: all 0.4s ease;
-        padding: 60px 20px;
+        padding: 40px 20px;
         gap: 20px;
     }
     .nav-links a {
@@ -151,10 +153,11 @@
         <label for="check" class="close-menu">✕</label>
         <a href="./index.html">HOME</a>
         <a href="./shop.html">SHOP</a>
-        <a href="./AboutUs.html">ABOUT</a>
-        <a href="./contact.html">CONTACT</a>
-        <a href="./watches.html">WATCHES</a>  
-        <a href="./jewelries.html">JEWELRIES/ACCESSORIES</a>
+        <a href="./watches.html">WATCHES</a>
+        <a href="./jewelries.html">JEWELRIES</a>
+        <a href="./AboutUs.html">ABOUT</a> 
+        <a href="./contact.html">CONTACT</a> 
+        <a href="./beauty.html">BEAUTY ESSENTIALS</a> 
     </div>
    </nav>
       <button onclick="history.back()" class="back">← Back</button></a>
